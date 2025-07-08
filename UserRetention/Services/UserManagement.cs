@@ -24,14 +24,14 @@ namespace UserRetention.Services
             var user = CreateUser(userRequest);
             _logger.LogInformation("Adding user: {Name}, Email: {Email}", user.Name, user.Email);
 
-            var checkUser = await appDBContext.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
+            var checkUser = await appDBContext.TUsers.FirstOrDefaultAsync(u => u.Email == user.Email);
             if (checkUser != null)
             {
                 _logger.LogWarning("User with email {Email} already exists.", user.Email);
                 return CreateResponseUser(null, 409, "User already exists.", false);
             }
 
-            await appDBContext.Users.AddAsync(user);
+            await appDBContext.TUsers.AddAsync(user);
             await appDBContext.SaveChangesAsync();
             _logger.LogInformation("User {Name} added successfully.", user.Name);
 
@@ -63,14 +63,14 @@ namespace UserRetention.Services
 
         public async Task<ResponseUser<User>?> DeleteUserAsync(string email)
         {
-            var user = await appDBContext.Users.FirstOrDefaultAsync(u => u.Email == email);
+            var user = await appDBContext.TUsers.FirstOrDefaultAsync(u => u.Email == email);
             if (user == null)
             {
                 _logger.LogWarning("User with email {Email} not found.", email);
                 return CreateResponseUser(null, 404, "User not found.", false);
             }
             _logger.LogInformation("Deleting user: {Name}, Email: {Email}", user.Name, user.Email);
-            appDBContext.Users.Remove(user);
+            appDBContext.TUsers.Remove(user);
             await appDBContext.SaveChangesAsync();
 
             return CreateResponseUser(user, 200, "User deleted successfully.", true);
@@ -78,7 +78,7 @@ namespace UserRetention.Services
 
         public async Task<List<User>> GetAllUsersAsync()
         {
-            var users = await appDBContext.Users.ToListAsync();
+            var users = await appDBContext.TUsers.ToListAsync();
             _logger.LogInformation("Retrieved {Count} users from the database.", users.Count);
             return users;
 
@@ -87,7 +87,7 @@ namespace UserRetention.Services
 
         public async Task<ResponseUser<User>?> GetUserAsync(string email)
         {
-            var user = await appDBContext.Users.FirstOrDefaultAsync(u => u.Email == email);
+            var user = await appDBContext.TUsers.FirstOrDefaultAsync(u => u.Email == email);
             if (user == null)
             {
                 _logger.LogWarning("User with email {Email} not found.", email);
@@ -99,7 +99,7 @@ namespace UserRetention.Services
 
         public async Task<ResponseUser<User>?> UpdateUserAsync(string email, RequestUser userRequest)
         {
-            var user = await appDBContext.Users.FirstOrDefaultAsync(u => u.Email == email);
+            var user = await appDBContext.TUsers.FirstOrDefaultAsync(u => u.Email == email);
             if (user == null)
             {
                 _logger.LogWarning("User with email {Email} not found.", email);
@@ -109,7 +109,7 @@ namespace UserRetention.Services
             user.Name = userRequest.Name;
             user.Email = userRequest.Email;
 
-            appDBContext.Users.Update(user);
+            appDBContext.TUsers.Update(user);
             await appDBContext.SaveChangesAsync();
 
             return CreateResponseUser(user, 200, "User updated successfully.", true);

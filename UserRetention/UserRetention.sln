@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36203.30 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRetention", "UserRetention.csproj", "{FCBB8D77-8F8F-4D9B-A8ED-177E7CC500B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUserManagment", "..\TestUserManagment\TestUserManagment.csproj", "{38EF1C50-8FB9-43CD-8C34-DA0BEE4B822A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FCBB8D77-8F8F-4D9B-A8ED-177E7CC500B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCBB8D77-8F8F-4D9B-A8ED-177E7CC500B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCBB8D77-8F8F-4D9B-A8ED-177E7CC500B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38EF1C50-8FB9-43CD-8C34-DA0BEE4B822A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38EF1C50-8FB9-43CD-8C34-DA0BEE4B822A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38EF1C50-8FB9-43CD-8C34-DA0BEE4B822A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38EF1C50-8FB9-43CD-8C34-DA0BEE4B822A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

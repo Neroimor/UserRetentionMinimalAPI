@@ -11,6 +11,6 @@ namespace UserRetention.DataBase
                 
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> TUsers { get; set; }
     }
 }
