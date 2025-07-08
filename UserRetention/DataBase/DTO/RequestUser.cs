@@ -5,9 +5,9 @@ namespace UserRetention.DataBase.DTO
     public class RequestUser
     {
         [Required(ErrorMessage = "Name is required."), StringLength(50)]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         [EmailAddress(ErrorMessage = "Invalid email address format.")]
-        public string Email { get; set; }
+        public string Email { get; set; } = string.Empty;
     }
 }
