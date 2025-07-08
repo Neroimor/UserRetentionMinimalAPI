@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.HttpLogging;
+using UserRetention.DataBase.DTO;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
@@ -20,6 +21,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapGet("/added", async (RequestUser newUser) =>
+{
 
+
+});
 
 app.Run();
