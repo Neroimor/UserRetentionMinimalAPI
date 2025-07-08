@@ -118,6 +118,3 @@ dotnet test
 ![Снимок экрана 2025-07-08 111421](https://github.com/user-attachments/assets/d6281469-56bd-4658-81b6-124cb1f1d65d)
 ![Снимок экрана 2025-07-08 111452](https://github.com/user-attachments/assets/aa0af03d-e194-4637-92dc-12f41c349a9e)
 ![Снимок экрана 2025-07-08 111510](https://github.com/user-attachments/assets/520fca6b-34c6-4cbf-ad61-1d72b858b4d0)
-
-
-Поменяйте названия файлов и подписи под изображениями в зависимости от ваших скриншотов.
