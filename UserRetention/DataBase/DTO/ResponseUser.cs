@@ -2,8 +2,9 @@
 {
     public class ResponseUser<T>
     {
-        string Message { get; set; } = string.Empty;
-        bool Success { get; set; } = false;
+        public string Message { get; set; } = string.Empty;
+        public bool Success { get; set; } = false;
+        public int StatusCode { get; set; } = 200;
 
         public T? Data { get; set; } = default!;
     }

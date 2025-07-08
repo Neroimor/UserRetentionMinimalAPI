@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.HttpLogging;
+using Microsoft.EntityFrameworkCore;
+using UserRetention.DataBase;
 using UserRetention.DataBase.DTO;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +9,9 @@ builder.Services.AddLogging();
 builder.Services.AddHttpLogging(opts =>
 opts.LoggingFields = HttpLoggingFields.RequestProperties);
 builder.Logging.AddFilter("Microsoft.AspNetCore.HttpLogging.HttpLoggingMiddleware", LogLevel.Information);
-
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<AppDBContext>(options =>
+    options.UseNpgsql(connectionString));
 
 
 
@@ -23,7 +27,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.MapGet("/added", async (RequestUser newUser) =>
 {
-
 
 });
 
