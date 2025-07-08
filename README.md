@@ -110,3 +110,14 @@
 cd tests/TestUserManagment
 dotnet test
 ```
+
+## Скриншоты
+
+![Снимок экрана 2025-07-08 111320](https://github.com/user-attachments/assets/5315f3a2-0810-4ee0-9630-cb19161b9987)
+![Снимок экрана 2025-07-08 111358](https://github.com/user-attachments/assets/01dd4b3a-ddb0-47f3-9b17-33d948b0e162)
+![Снимок экрана 2025-07-08 111421](https://github.com/user-attachments/assets/d6281469-56bd-4658-81b6-124cb1f1d65d)
+![Снимок экрана 2025-07-08 111452](https://github.com/user-attachments/assets/aa0af03d-e194-4637-92dc-12f41c349a9e)
+![Снимок экрана 2025-07-08 111510](https://github.com/user-attachments/assets/520fca6b-34c6-4cbf-ad61-1d72b858b4d0)
+
+
+Поменяйте названия файлов и подписи под изображениями в зависимости от ваших скриншотов.
