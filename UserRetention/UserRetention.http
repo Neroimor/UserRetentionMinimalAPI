@@ -1,0 +1,6 @@
+@UserRetention_HostAddress = http://localhost:5265
+
+GET {{UserRetention_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
